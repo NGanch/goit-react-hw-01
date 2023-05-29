@@ -37,7 +37,6 @@ import friends from '../path/friends.json';
 import { TransactionHistory } from '../components/comp_transactionhistory/TransactionHistory.jsx';
 import transactions from '../path/transactions.json';
 // =================== TransactionHistory ===================
-// // const users = user[0];
 
 export function Profile(){
 return (
