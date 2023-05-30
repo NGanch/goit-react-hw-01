@@ -32,6 +32,12 @@ return(
 </table>
 )
 }
+
+TransactionHistory.propTypes = {
+    type: PropTypes.string,
+    amount: PropTypes.number,
+    currency: PropTypes.string,
+}
 //----------------------- перший спосіб -----------------------
 //----------------------- другий спосиб -----------------------
 // export function TransactionTitle({children}){
@@ -68,9 +74,4 @@ return(
 //     )
 //     }
 
-    TransactionHistory.propTypes = {
-        type: PropTypes.string,
-        amount: PropTypes.number,
-        currency: PropTypes.string,
-}
 //----------------------- другий спосиб -----------------------

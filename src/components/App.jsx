@@ -1,47 +1,24 @@
-// export const App = () => {
-//   return (
-//     <div
-//       style={{
-//         height: '100vh',
-//         display: 'flex',
-//         justifyContent: 'center',
-//         alignItems: 'center',
-//         fontSize: 40,
-//         color: '#010101'
-//       }}
-//     >
-//       React homework template
-//     </div>
-//   );
-// };
 
-// =================== profile ===================
-import { UserProfile }  from '../components/comp_prifile/Profile.jsx';
+import { UserProfile }  from './component_prifile/Profile.jsx';
 import user from '../path/user.json';
-// =================== profile ===================
 
-// =================== Statistics ===================
-import { Statistics } from '../components/comp_statistics/Statistics.jsx';
-import { StatisticsList } from '../components/comp_statistics/Statistics.jsx';
+import { Statistics } from './component_statistics/Statistics.jsx';
+import { StatisticsList } from './component_statistics/Statistics.jsx';
 import data from '../path/data.json';
-// =================== Statistics ===================
-// =================== FriendList ===================
+
 //----------------------- другий спосиб -----------------------
-import { FriendList } from '../components/comp_friendlist/FriendList.jsx';
-// import { FriendListItem } from '../components/comp_friendlist/FriendList.jsx';
+import { FriendList } from './component_friendlist/FriendList.jsx';
+import { FriendListItem } from './component_friendlist/FriendList.jsx';
 import friends from '../path/friends.json';
-// =================== FriendList ===================
 
-// =================== TransactionHistory ===================
 // import { TransactionTitle } from '../components/comp_transactionhistory/TransactionHistory.jsx';
-import { TransactionHistory } from '../components/comp_transactionhistory/TransactionHistory.jsx';
+import { TransactionHistory } from './component_transactionhistory/TransactionHistory.jsx';
 import transactions from '../path/transactions.json';
-// =================== TransactionHistory ===================
 
-export function Profile(){
-return (
-<div>
-     <UserProfile  
+export const App = () => {
+  return (
+    <>
+       <UserProfile  
       username={user.username}
       tag ={user.tag} 
       location ={user.location}
@@ -50,37 +27,42 @@ return (
       views={user.stats.views} 
       likes={user.stats.likes} 
    />
-</div>
-);
-}
-// =================== profile ===================
-
-// =================== Statistics ===================
-
-
-export function Section (){
-    return(
-        <Statistics title="Upload stats" stats={data} >
+   <>
+      <Statistics title="Upload stats" stats={data} >
             <StatisticsList stats={data} />
         </Statistics>
+    </>
+    <>
+      {/* <FriendList friends={friends} />  */}
+        <FriendList friends={friends}> 
+        <FriendListItem friends={friends} />
+        </FriendList>
+    </>
+    <>
 
-    )
-}
+    <TransactionHistory items={transactions} />
+    
 
-// =================== Statistics ===================
+    </>
+    </>
+   
+  );
+};
+
+
 
 // =================== FriendList ===================
 //----------------------- перший спосіб -----------------------
 // import { FriendList } from '../components/comp_friendlist/FriendList.jsx';
 // import friends from '../path/friends.json';
 
-export function Friend(){
+// export function Friend(){
  
-    return(
-        <FriendList friends={friends} /> 
+//     return(
+//         <FriendList friends={friends} /> 
           
-    )
-}
+//     )
+// }
 
 //----------------------- перший спосіб -----------------------
 //----------------------- другий спосиб -----------------------
@@ -104,12 +86,12 @@ export function Friend(){
 // =================== TransactionHistory ===================
 
 //----------------------- перший спосіб -----------------------
-export function Transaction(){
-  return(
-    <TransactionHistory items={transactions} />
+// export function Transaction(){
+//   return(
+//     <TransactionHistory items={transactions} />
     
-  )
-}
+//   )
+// }
 //----------------------- перший спосіб -----------------------
 //----------------------- другий спосиб -----------------------
 // export function Transaction(){
