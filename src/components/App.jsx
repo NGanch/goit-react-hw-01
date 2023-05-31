@@ -8,7 +8,7 @@ import data from '../path/data.json';
 
 //----------------------- другий спосиб -----------------------
 import { FriendList } from './component_friendlist/FriendList.jsx';
-import { FriendListItem } from './component_friendlist/FriendList.jsx';
+import { FriendListItem } from './component_friendlist/FriendListItem.jsx';
 import friends from '../path/friends.json';
 
 // import { TransactionTitle } from '../components/comp_transactionhistory/TransactionHistory.jsx';
@@ -33,16 +33,14 @@ export const App = () => {
         </Statistics>
     </>
     <>
-      {/* <FriendList friends={friends} />  */}
-        <FriendList friends={friends}> 
-        <FriendListItem friends={friends} />
+        <FriendList 
+        friends={friends}> 
+        <FriendListItem
+         />
         </FriendList>
     </>
     <>
-
     <TransactionHistory items={transactions} />
-    
-
     </>
     </>
    

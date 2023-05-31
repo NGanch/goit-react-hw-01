@@ -25,10 +25,7 @@ return(
                 </thead>
             ))}
      
-   
             </tbody>
-     
- 
 </table>
 )
 }
