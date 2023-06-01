@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import css from "./TransactionHistory.module.css";
-//----------------------- перший спосіб -----------------------
+
 export function TransactionHistory({items}){
 return(
     <table className={css.table}>
@@ -13,8 +13,7 @@ return(
             </tr>
         </thead>
 
-            <tbody>
-          
+        <tbody>
             {items.map(item =>(
            <thead key ={item.id} className={css.table_thead}>
                 <tr>
@@ -22,10 +21,10 @@ return(
                 <th className={css.table_cell}>{item.amount}</th>
                 <th className={css.table_cell}>{item.currency}</th>
                 </tr>
-                </thead>
+            </thead>
             ))}
      
-            </tbody>
+        </tbody>
 </table>
 )
 }
@@ -35,6 +34,7 @@ TransactionHistory.propTypes = {
     amount: PropTypes.number,
     currency: PropTypes.string,
 }
+
 //----------------------- перший спосіб -----------------------
 //----------------------- другий спосиб -----------------------
 // export function TransactionTitle({children}){

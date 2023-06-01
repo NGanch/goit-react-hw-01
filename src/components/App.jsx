@@ -6,12 +6,9 @@ import { Statistics } from './component_statistics/Statistics.jsx';
 import { StatisticsList } from './component_statistics/Statistics.jsx';
 import data from '../path/data.json';
 
-//----------------------- другий спосиб -----------------------
 import { FriendList } from './component_friendlist/FriendList.jsx';
-import { FriendListItem } from './component_friendlist/FriendListItem.jsx';
 import friends from '../path/friends.json';
 
-// import { TransactionTitle } from '../components/comp_transactionhistory/TransactionHistory.jsx';
 import { TransactionHistory } from './component_transactionhistory/TransactionHistory.jsx';
 import transactions from '../path/transactions.json';
 
@@ -33,11 +30,7 @@ export const App = () => {
         </Statistics>
     </>
     <>
-        <FriendList 
-        friends={friends}> 
-        <FriendListItem
-         />
-        </FriendList>
+        <FriendList  friends={friends} /> 
     </>
     <>
     <TransactionHistory items={transactions} />

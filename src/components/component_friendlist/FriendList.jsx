@@ -9,16 +9,15 @@ export function FriendList({friends}){
               {friends.map(({id, avatar, name, isOnline}) => {
                return (
                 <FriendListItem
-               key={id}
+                key={id}
                 avatar={avatar}
-                 name={name} 
-                 isOnline={isOnline}
+                name={name} 
+                isOnline={isOnline}
                />
                );
                })
                }
                 </ul>
-         
         </section>
     )  
 }
